@@ -3,9 +3,9 @@ import React from "react";
 const Service = ({ service, setTreatment }) => {
   const { name, slots } = service;
   return (
-    <div class="card lg:max-w-lg bg-base-100 shadow-xl">
-      <div class="card-body text-center">
-        <h2 class="text-xl font-bold text-secondary">{name}</h2>
+    <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+      <div className="card-body text-center">
+        <h2 className="text-xl font-bold text-secondary">{name}</h2>
         <p>
           {slots.length > 0 ? (
             <span>{slots[0]} </span>
@@ -14,10 +14,10 @@ const Service = ({ service, setTreatment }) => {
           )}
           {slots.length} {slots.length > 1 ? "spaces" : "space"}
         </p>
-        <div class="card-actions justify-center">
+        <div className="card-actions justify-center">
           <label
             for="booking-modal"
-            class="btn btn-secondary btn-sm text-white uppercase bg-gradient-to-r from-secondary to-primary"
+            className="btn btn-secondary btn-sm text-white uppercase bg-gradient-to-r from-secondary to-primary"
             disabled={slots.length === 0}
             onClick={() => setTreatment(service)}
           >
